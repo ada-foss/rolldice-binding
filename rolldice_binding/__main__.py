@@ -1,6 +1,6 @@
 import argparse
 import sys
-from .core import *
+from .core import get_renderer,enact_expressions
 
 def main():
     parser = argparse.ArgumentParser(description='A command line utility to'

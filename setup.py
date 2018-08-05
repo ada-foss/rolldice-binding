@@ -21,6 +21,7 @@ setuptools.setup(
     install_requires = [
         'py-rolldice'
         ],
+    python_requires = '>=3.5',
     entry_points = {
         'console_scripts': [
             'rolldice = rolldice_binding.__main__:main',
