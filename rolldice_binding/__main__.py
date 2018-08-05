@@ -1,6 +1,6 @@
 import argparse
 import sys
-from core import *
+from .core import *
 
 def main():
     parser = argparse.ArgumentParser(description='A command line utility to'
@@ -8,7 +8,7 @@ def main():
 
     parser.add_argument('expressions', nargs='+',
             help='any expressions to parse and run')
-    parser.add_argument('renderer', default='pretty',
+    parser.add_argument('renderer', default='pretty', nargs='?',
             help='which renderer to use (default: pretty)')
     parser.add_argument('pretty_json', action='store_true',
             help='whether json should be human readable')

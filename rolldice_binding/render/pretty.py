@@ -8,8 +8,8 @@ def render(results, args):
     for r in results:
         header_prefix = '# '+r[0]+' '
         print(header_prefix + '#'*(console_width - len(header_prefix)))
-        print(' ->', r[1])
         print(' '+r[2])
+        print(' ->', r[1])
         print()
     
     # print tail

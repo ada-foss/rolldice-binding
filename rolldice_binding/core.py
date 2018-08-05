@@ -2,7 +2,8 @@ import importlib
 from rolldice import roll_dice
 
 def get_renderer(renderer):
-    render_module = importlib.import_module("render.%s"%(renderer))
+    return importlib.import_module("..render.%s"%(renderer),
+            package=__name__)
 
 def get_result(expression):
     ans, explanation = roll_dice(expression)
