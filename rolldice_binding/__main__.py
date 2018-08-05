@@ -8,9 +8,11 @@ def main():
 
     parser.add_argument('expressions', nargs='+',
             help='any expressions to parse and run')
-    parser.add_argument('renderer', default='pretty', nargs='?',
+    parser.add_argument('--renderer', dest='renderer', default='pretty',
+            nargs='?',
             help='which renderer to use (default: pretty)')
-    parser.add_argument('pretty_json', action='store_true',
+    parser.add_argument('--pretty_json', dest='pretty_json',
+            action='store_true',
             help='whether json should be human readable')
 
     args = parser.parse_args()
